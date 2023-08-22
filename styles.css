@@ -35,7 +35,3 @@ body {
     display: block;
     padding-bottom: 100%;
 }
-
-.squareGrid:hover {
-    background-color: aqua;
-}

@@ -39,6 +39,20 @@ function generateGrid (gridAmount) {
 
 generateGrid(16);
 
+const square = document.querySelectorAll('.squareGrid')
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    let x = 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    return x;
+}
+
+function colorMove () {
+    square.forEach(square => square.addEventListener ('mouseover', () => {
+        let x = random_rgba();
+        square.setAttribute('style', `background: ${x}`)
+    }))
+}
+
 btn.addEventListener ('click', () => {
     amount = prompt("How many squareGrids you want?");
     if(isNaN(amount) || amount > 100) alert("Please type in a number which is not greater than 100!")
@@ -49,6 +63,15 @@ btn.addEventListener ('click', () => {
             element.removeChild(element.firstChild)
         }
         generateGrid(amount);
+        const square = document.querySelectorAll('.squareGrid')
+        square.forEach(square => square.addEventListener ('mouseover', () => {
+            let x = random_rgba();
+            square.setAttribute('style', `background: ${x}`)
+        }))
     }
 }) 
+
+
+
+colorMove();
 
