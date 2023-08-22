@@ -1,0 +1,41 @@
+
+html {
+    display: flex;
+    flex: auto;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    margin: 0;
+    background-color: brown;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+.subDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.squareGrid {
+    width: 50%;
+    margin: 1px;
+    background-color: white;
+}
+
+.squareGrid:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.squareGrid:hover {
+    background-color: aqua;
+}
